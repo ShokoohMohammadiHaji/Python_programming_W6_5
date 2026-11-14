@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # W6_5
 
 Create a program which can analyse numbers in a text file.
@@ -78,3 +79,6 @@ Count;Sum;Greatest;Average
 #### Number analysis - END ####
 Program ending.
 ````
+=======
+# Python_programming_W6_5
+>>>>>>> origin/main
