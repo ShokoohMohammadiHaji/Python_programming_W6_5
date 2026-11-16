@@ -58,6 +58,6 @@ def main():
 
     print("Program ending.")
 
-
-main()
+if __name__=="__mani__":
+    main()
 
