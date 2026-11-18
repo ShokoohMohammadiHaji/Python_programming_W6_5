@@ -1,5 +1,5 @@
 
-def readValues(PfileName)->str:
+def readValues(PfileName) -> str:
     content = ""
     sourceFile = open(PfileName, "r", encoding="utf-8")
 
@@ -13,9 +13,7 @@ def readValues(PfileName)->str:
     return content
 
 
-def analyseNumbers(Pfile, PfileName):
-    print("#### Number analysis - START ####")
-
+def analyseValues(Pfile):
     cleanFile = Pfile.strip(";").split(";")
 
     cleanFileInt = []
@@ -36,15 +34,16 @@ def analyseNumbers(Pfile, PfileName):
 
     average = total / lineCounter
 
-    displayResults(total, lineCounter, greatest, average, PfileName)
+    result = displayResults(total, lineCounter, greatest, average)
 
-    print("#### Number analysis - END ####")
+    return result
 
 
-def displayResults(Ptotal, PlineCounter, Pgreatest, Paverage, Pfilename):
-    print(f'File "{Pfilename}" results:')
-    print("Count;Sum;Greatest;Average")
-    print(f'{PlineCounter};{Ptotal};{Pgreatest};{Paverage:.2f}')
+def displayResults(Ptotal, PlineCounter, Pgreatest, Paverage):
+    result = "Count;Sum;Greatest;Average\n"
+    result += f'{PlineCounter};{Ptotal};{Pgreatest};{Paverage:.2f}\n'
+
+    return result
 
 
 def main():
@@ -54,15 +53,12 @@ def main():
 
     file = readValues(fileName)
 
-    analyseNumbers(file, fileName)
+    result = analyseValues(file)
+
+    print(result)
 
     print("Program ending.")
 
-<<<<<<< HEAD
-if __name__=="__mani__":
-=======
 
 if __name__ == "__main__":
->>>>>>> e50db91 (Fix main execution for autograding)
     main()
-
