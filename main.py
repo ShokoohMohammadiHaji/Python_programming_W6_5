@@ -58,6 +58,11 @@ def main():
 
     print("Program ending.")
 
+<<<<<<< HEAD
 if __name__=="__mani__":
+=======
+
+if __name__ == "__main__":
+>>>>>>> e50db91 (Fix main execution for autograding)
     main()
 
